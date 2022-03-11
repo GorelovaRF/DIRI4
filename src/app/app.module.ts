@@ -19,6 +19,7 @@ import { NewWineComponent } from './new-wine/new-wine.component';
 import { ErrorDivComponent } from './component/error-div/error-div.component';
 import { LoginComponent } from './login/login.component';
 import { SigninComponent } from './signin/signin.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { SigninComponent } from './signin/signin.component';
     ErrorDivComponent,
     LoginComponent,
     SigninComponent,
-    
+ 
   ],
   imports: [
     BrowserModule,
@@ -44,6 +45,9 @@ import { SigninComponent } from './signin/signin.component';
     Ng2SearchPipeModule,
     FormsModule,
     ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBEVLuALTNr5HLHfj6OgQ53ah-HvTS0lG8'
+      })
   ],
   providers: [{provide: HTTP_INTERCEPTORS,useClass: SpinnerInterceptor, multi:true},{provide: HTTP_INTERCEPTORS,useClass: ErrorInterceptor, multi:true}],
   bootstrap: [AppComponent]

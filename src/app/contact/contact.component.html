@@ -1,3 +1,34 @@
+<div class="container m-5">
+    <agm-map [latitude]="location.latitude" [longitude]="location.longitude" [zoom]="location.zoom" [mapTypeId]="location.mapType">
+        <agm-marker [latitude]="location.latitude" [longitude]="location.longitude" >
+            <agm-info-window >
+                <div class="col">
+                    <div class="row">
+                        <div class="col" style="text-align: center;">
+                            <p style="font-size: large;"> <strong>Vinoteca</strong></p>                               
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="font-size: medium;"> <strong>Direccion: </strong>Carrer Castaños, 7 </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="font-size: medium;">03001 Alicante</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="font-size: medium;"> <strong>672 528 087</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </agm-info-window>
+        </agm-marker>
+    </agm-map>
+</div>
+
 <div class="container">
     <div class="row row-align">
         <div class="col">
@@ -25,3 +56,5 @@
 
     </div>
 </div>
+
+

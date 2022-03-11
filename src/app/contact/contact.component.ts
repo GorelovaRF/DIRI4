@@ -7,7 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  location!: any
+
+  constructor() { 
+
+    this.location = {
+      latitude: 38.383115,
+      longitude: -0.509398,
+      zoom: 17,
+      mapType: "hybrid"
+     
+    }
+
+  }
 
   ngOnInit(): void {
   }
