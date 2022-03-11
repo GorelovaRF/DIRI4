@@ -1,0 +1,18 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col div-input">
+            <input type="text" name="search" [(ngModel)]="searchVine" placeholder="Busqueda">
+        </div>
+    </div>
+    <div class="error" *ngIf="error !== undefined">
+      <app-error-div [error]='error'></app-error-div>
+    </div>
+    <div class="row">
+        <div class="col" style="text-align: center;" *ngFor="let p of productList | filter:searchVine">
+            <app-cart [product]='p' ></app-cart>
+        </div>
+    </div> 
+
+</div>

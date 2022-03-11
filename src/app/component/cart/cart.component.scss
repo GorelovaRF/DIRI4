@@ -1,0 +1,37 @@
+.card {
+  border: none;
+}
+
+.card-img-top {
+  height: 170px;
+  object-fit: contain;
+}
+h5 {
+  text-align: center;
+  font-style: italic;
+  color: #472019;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-text {
+  color: #472019;
+}
+
+.card-price {
+  color: #472019;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.btn {
+  background: #472019;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+}

@@ -1,0 +1,114 @@
+<div class="container" style="text-align: center;">
+    <div class="row">
+        <h1>Añadir nuevo vino</h1>
+    </div>
+</div>
+
+<div class="main">
+    <form [formGroup]="form" name="form" (submit)="createNewWine()">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" id="inputNombre" formControlName="nombre" placeholder="Nombre">
+                  <div *ngIf="(f.nombre.invalid && f.nombre.touched) || f.nombre.dirty" >
+                    <span class="text-danger" *ngIf="f.nombre.errors?.required"  >
+                    Es necesario facilitar un nombre
+                   </span>
+                   <span class="text-danger" *ngIf="f.nombre.errors?.minlength" >
+                   Como minimo el nombre tiene que tener 3 caracteres
+                  </span>
+                  <span class="text-danger" *ngIf="f.nombre.errors?.maxlength" >
+                    Como maximo el nombre tiene que tener 60 caracteres
+                   </span>
+                  </div>
+                </div>
+              </div>
+            <div class="row">                
+                <div class="col">  
+                        <input type="text" class="form-control" id="inputUvas" formControlName="uvas" placeholder="Uvas">
+                        <div *ngIf="(f.uvas.invalid && f.uvas.touched) || f.uvas.dirty" >
+                            <span class="text-danger" *ngIf="f.uvas.errors?.required"  >
+                            Es necesario facilitar un especie de uvas
+                           </span>
+                        </div>
+                </div>              
+                <div class="col">              
+                        <input type="text" class="form-control" id="inputPais" formControlName="pais" placeholder="Pais">     
+                        <div *ngIf="(f.pais.invalid && f.pais.touched) || f.pais.dirty" >
+                            <span class="text-danger" *ngIf="f.pais.errors?.required"  >
+                            Es necesario facilitar el pais de origen del vino
+                           </span>
+                           <span class="text-danger" *ngIf="f.pais.errors?.pattern">
+                            Formato invalido del Pais
+                           </span>
+                        </div>              
+                </div>
+                <div class="col">               
+                        <input type="text" class="form-control" id="inputAnyo" formControlName="anyo" placeholder="Año">
+                        <div *ngIf="(f.anyo.invalid && f.anyo.touched) || f.anyo.dirty" >
+                            <span class="text-danger" *ngIf="f.anyo.errors?.required"  >
+                            Es necesario facilitar el año
+                           </span>
+                           <span class="text-danger" *ngIf="f.anyo.errors?.customeDateValidators">
+                           El año tiene que estar entre 1990 y 2022
+                           </span>
+                        </div> 
+                </div>
+            </div>
+
+            <div class="row">                
+                <div class="col">  
+                        <input type="text" class="form-control" id="inputPrecio" formControlName="precio" placeholder="Precio">
+                        <div *ngIf="(f.precio.invalid && f.precio.touched) || f.precio.dirty" >
+                            <span class="text-danger" *ngIf="f.precio.errors?.required"  >
+                            Es necesario facilitar el precio
+                           </span>
+                           <span class="text-danger" *ngIf="f.precio.errors?.pattern">
+                            Formato invalido del precio
+                           </span>
+                        </div> 
+                </div>              
+                <div class="col">              
+                        <input type="text" class="form-control" id="inputImagen"  formControlName="imagen" placeholder="Imagen">   
+                        <div *ngIf="(f.imagen.invalid && f.imagen.touched) || f.imagen.dirty" >
+                            <span class="text-danger" *ngIf="f.imagen.errors?.required"  >
+                            Es necesario facilitar el enlace del imagen
+                           </span>
+                        </div>                 
+                </div>
+                <div class="col">               
+                        <input type="text" class="form-control" id="inputRegion"  formControlName="region" placeholder="Region">
+                        <div *ngIf="(f.region.invalid && f.region.touched) || f.region.dirty" >
+                            <span class="text-danger" *ngIf="f.region.errors?.required"  >
+                            Es necesario facilitar un region
+                           </span>
+                           <span class="text-danger" *ngIf="f.region.errors?.pattern">
+                            Formato invalido del region
+                           </span>
+                        </div> 
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">  
+                    <input type="text" class="form-control" id="inputDesc" placeholder="Descripcion" formControlName="descripcion" style="height: 80px;">
+                    <div *ngIf="(f.descripcion.invalid && f.descripcion.touched) || f.descripcion.dirty" >
+                        <span class="text-danger" *ngIf="f.descripcion.errors?.required"  >
+                        Es necesario facilitar una descripcion
+                       </span>
+                       <span class="text-danger" *ngIf="f.descripcion.errors?.pattern">
+                        Formato invalido de la descripcion
+                       </span>
+                    </div> 
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="submit" class="btn" style="font-size: large; font-weight: bold;">Crear</button>
+                </div>              
+            </div>  
+        </div>
+    </form>
+
+</div>

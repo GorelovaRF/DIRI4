@@ -1,0 +1,9 @@
+<div class="card" style="width: 18rem;" >
+    <img class="card-img-top" src="assets/img/{{product.imagen}}" alt="Card image cap">
+    <div class="card-body">
+      <h6 class="card-title">{{product.nombre}}</h6>
+      <p class="card-text">{{product.pais}}, {{product.anyo}}</p>
+      <p class="card-price">{{product.precio | currency: 'EUR'}}</p>
+      <a class="btn" routerLink="detalle/{{product.id}}">Detalle</a>
+    </div>
+  </div>
